@@ -2,7 +2,7 @@
 
 Cookie manager for React Native
 
-## Installation
+# Installation
 
 ```sh
 npm install native-cookies

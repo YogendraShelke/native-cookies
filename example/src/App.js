@@ -3,21 +3,20 @@ import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Cookies from 'native-cookies';
 
-const url = 'http://bing.com/';
+const uri = 'http://bing.com/';
 
 export default function App() {
-  Cookies.get(url).then((data) => {
-    console.log(`get cookie from ${url}: ${JSON.stringify(data)}`);
+  Cookies.get(uri).then((data) => {
+    console.log(`get cookie from ${uri}: ${JSON.stringify(data)}`);
   });
-  Cookies.set(url, 'foo', 'bar').then(() => {
-    console.log(`set cookie 'foo=bar' for ${url}`);
+  Cookies.set(uri, 'foo', 'bar').then(() => {
+    console.log(`set cookie 'foo=bar' for ${uri}`);
+  });
+  Cookies.clear(uri).then(() => {
+    console.log(`clear all cookie from ${uri}`);
   });
 
-  Cookies.clear(url).then(() => {
-    console.log(`clear all cookie from ${url}`);
-  });
-
-  return <WebView style={styles.container} source={{ uri: url }} />;
+  return <WebView style={styles.container} source={{ uri }} />;
 }
 
 const styles = StyleSheet.create({

@@ -1,4 +1,5 @@
 #import "NativeCookies.h"
+#import "RCTConvert.h"
 
 @implementation NativeCookies
 
