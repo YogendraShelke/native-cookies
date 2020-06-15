@@ -52,7 +52,7 @@ RCT_EXPORT_METHOD(setCookie:(NSURL *) url
     resolve(NULL);
 }
 
-RCT_EXPORT_METHOD(clearCookieFromURL:(NSURL *)url
+RCT_EXPORT_METHOD(clearCookie:(NSURL *)url
                      resolver:(RCTPromiseResolveBlock)resolve
                      rejecter:(RCTPromiseRejectBlock)reject)
 {
@@ -68,7 +68,7 @@ RCT_EXPORT_METHOD(clearCookieFromURL:(NSURL *)url
     resolve(NULL);
 }
 
-RCT_EXPORT_METHOD(clearCookies:(RCTPromiseResolveBlock)resolve
+RCT_EXPORT_METHOD(clearAllCookies:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
 

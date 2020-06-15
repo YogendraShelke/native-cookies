@@ -15,7 +15,7 @@ npx pod-install ios
 ## Import
 
 ```javascript
-import Cookies from 'native-cookies';
+import Cookies from "native-cookies";
 ```
 
 ## Get
@@ -24,12 +24,10 @@ import Cookies from 'native-cookies';
 
 ```javascript
 // get all cookies which are belonged to 'http://bing.com/'
-Cookies.get('http://bing.com/').then((cookie) => console.log(cookie));
+Cookies.get("http://bing.com/").then((cookie) => console.log(cookie));
 
 // get cookie named 'foo' from 'http://bing.com/'
-Cookies.get('http://bing.com/', 'foo').then((cookie) =>
-  console.log(cookie)
-);
+Cookies.get("http://bing.com/", "foo").then((cookie) => console.log(cookie));
 ```
 
 ## Set
@@ -51,27 +49,31 @@ The following options are available for now
 
 ```javascript
 // set cookie 'foo=bar' for 'http://bing.com/'
-Cookies.set('http://bing.com/', 'foo', 'bar').then(() =>
-  console.log('success')
+Cookies.set("http://bing.com/", "foo", "bar").then(() =>
+  console.log("success")
 );
 
 // set cookie 'foo=bar' for 'http://bing.com/' with options:
-Cookies.set('http://bing.com/', 'foo', 'bar', {
-  path: 'ditu',
-  domain: 'cn.bing.com',
-}).then(() => console.log('success'));
+Cookies.set("http://bing.com/", "foo", "bar", {
+  path: "ditu",
+  domain: "cn.bing.com",
+}).then(() => console.log("success"));
 ```
 
 ## Clear
 
-`Cookies.clear(url?: String): Promise`
+`Cookies.clear(url: String): Promise`
+
+```javascript
+// clear all cookies for 'http://bing.com'
+Cookies.clear("http://bing.com");
+```
+
+## ClearAll
 
 ```javascript
 // clear all cookies for all domains
-Cookies.clear();
-
-// clear all cookies for 'http://bing.com'
-Cookies.clear('http://bing.com');
+Cookies.clearAll();
 ```
 
 ## Contributing
