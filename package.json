@@ -1,6 +1,6 @@
 {
   "name": "native-cookies",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Cookie manager for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,7 +13,10 @@
     "ios",
     "native-cookies.podspec",
     "!example",
-    "!**/build"
+    "!**/build",
+    "!android/.gradle",
+    "!android/.idea",
+    "!android/.settings"
   ],
   "scripts": {
     "prepare": "bob build",
