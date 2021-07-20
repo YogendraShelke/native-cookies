@@ -38,7 +38,7 @@
     "@react-native-community/bob": "^0.15.1",
     "pod-install": "^0.1.0",
     "react": "16.11.0",
-    "react-native": "0.62.0"
+    "react-native": "0.62.3"
   },
   "peerDependencies": {
     "react": "*",
